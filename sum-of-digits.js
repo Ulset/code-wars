@@ -44,5 +44,3 @@ function digital_root(tall) {
         return sum
     }
 }
-
-console.log(digital_root(14))
