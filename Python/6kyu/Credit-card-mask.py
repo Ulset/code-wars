@@ -14,10 +14,11 @@ maskify("Skippy")                                   == "##ippy"
 maskify("Nananananananananananananananana Batman!") == "####################################man!"
 """
 
+
 def maskify(cc):
     output = ""
     for i in range(len(cc)):
-        if i>len(cc)-5:
+        if i > len(cc) - 5:
             output += cc[i]
         else:
             output += "#"

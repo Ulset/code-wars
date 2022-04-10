@@ -12,9 +12,10 @@ Test.assert_equals(next_id([0,0,0,0,0,0]), 1)
 Test.assert_equals(next_id([]), 0)
 """
 
+
 def next_id(arr):
     count = 0
-    while(True):
-        if(not count in arr):
+    while (True):
+        if (not count in arr):
             return count
         count += 1

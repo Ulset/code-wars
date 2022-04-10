@@ -6,9 +6,10 @@ is_isogram("aba" ) == false
 is_isogram("moOse" ) == false # -- ignore letter case
 """
 
+
 def is_isogram(string):
     string_upper = string.upper()
     for i in string_upper:
-        if string_upper.count(i)>1:
+        if string_upper.count(i) > 1:
             return False
     return True

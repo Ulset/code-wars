@@ -5,8 +5,9 @@ Examples
 "din"      =>  "((("
 "recede"   =>  "()()()"
 "Success"  =>  ")())())"
-"(( @"     =>  "))((" 
+"(( @"     =>  "))(("
 """
+
 
 def duplicate_encode(word):
     multi = []
