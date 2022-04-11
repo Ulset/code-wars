@@ -13,7 +13,12 @@ import re
 
 
 def top_3_words(text):
-    text_split = re.sub(r"[^a-zA-Z']", " ", text).split(" ")
-    word_count = {word: text_split.count(word) for word in text_split if word}
-    return [x[0] for x in sorted(word_count.items(), key=lambda t: t[1], reverse=True)][0:3]
+    text_split = re.sub(r"[^a-zA-Z']", " ", text.lower()).split(" ")  # Remove everything thats not characters or apostrophes, convert to lowercase as requested
+    text_split = list(filter(lambda x: x.count("'") != len(x) and x, text_split))  # Remove entries with only apostrophes or whitespace
+    word_count = {word: text_split.count(word) for word in text_split}
+    return [x[0] for x in sorted(word_count.items(), key=lambda t: t[1], reverse=True)][0:3]  # Return top 3 words based on word count
 
+
+print(top_3_words("''''   $ ##"))
+print(top_3_words("test test test a ting ting"))
+print(top_3_words("b c c c d d d d d d d "))
