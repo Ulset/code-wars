@@ -17,8 +17,10 @@ import itertools
 paranthese_options = [
     "{a} {a_sign} {b} {b_sign} {c} {c_sign} {d}",
     "({a} {a_sign} {b}) {b_sign} {c} {c_sign} {d}",
+    "({a} {a_sign} {b} {b_sign}) {c} {c_sign} {d}",
     "{a} {a_sign} ({b} {b_sign} {c} {c_sign} {d})",
-    "({a} {a_sign} {b}) {b_sign} ({c} {c_sign} {d})"
+    "({a} {a_sign} {b}) {b_sign} ({c} {c_sign} {d})",
+    "{a} {a_sign} ({b} {b_sign} {c}) {c_sign} {d}"
 ]
 
 
